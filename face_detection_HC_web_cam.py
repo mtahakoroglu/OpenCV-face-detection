@@ -5,9 +5,10 @@ import numpy as np
 print('[INFO] loading haar cascade face detector...')
 detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(0)
-previousTime = time.time()
 fps = deque(maxlen=100)
-showFPS, k = True, 0 # decide if you like to show fps count or not, frame number
+k = 0 # initialize frame number counting index
+showFPS, showFrameNumber = True, True # decide if you like to show fps count or not, frame number
+previousTime = time.time() # capture timestamp to initialize fps computation
 while True:
     ret, frame = cap.read()
     k = k+1
@@ -21,10 +22,12 @@ while True:
     fpsAvg = np.mean(fps)
     if showFPS:
         cv2.putText(frame, f"fps = {fpsAvg:.2f}", (30,50), 0, 1, (0,0,0), 2)
-    cv2.imshow('Web cam stream', frame)
+    if showFrameNumber:
+        cv2.putText(frame, f"frame #{k}", (frame.shape[1]-215,50), 0, 1, (0,0,0), 2)
+    cv2.imshow('Web cam stream with Haar Cascade face detection', frame)
     previousTime = currentTime
     if cv2.waitKey(1) & 0xFF == ord('c'): # kullanıcı c tuşuna basarsa görüntüyü kaydet
-        cv2.imwrite(f"result/haar_cascade_web_cam_frame_{k}.jpg", frame, [cv2.IMWRITE_JPEG_QUALITY, 100])
+        cv2.imwrite(f"result/haar_cascade_face_detection_frame_{k}.jpg", frame, [cv2.IMWRITE_JPEG_QUALITY, 100])
         print(f"Frame #{k} is saved to hard disk.")
     elif cv2.waitKey(1) == 27:
         break

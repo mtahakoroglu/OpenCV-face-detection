@@ -4,10 +4,10 @@ import numpy as np
 # load our serialized dnn model from disk
 print("[BİLGİ] derin öğrenme modeli olan ResNet'i Caffe kütüphanesinden yüklüyor...")
 net = cv2.dnn.readNetFromCaffe('deploy.prototxt.txt', 'res10_300x300_ssd_iter_140000.caffemodel')
-conf = 0.5 # minimum probability to filter weak detections
+conf = 0.15 # minimum probability to filter weak detections
 # load the input image and construct an input blob for the image
 # by resizing to a fixed 300x300 pixels and then normalizing it
-imgName = "IMG_20220824_111044.jpg"
+imgName = "IMG_6707.jpg"
 imgName, imgExtension = imgName.split('.')
 img = cv2.imread(f'image/{imgName}.{imgExtension}')
 (h, w) = img.shape[:2]
@@ -36,7 +36,7 @@ for i in range(0, detections.shape[2]):
 # save output image
 cv2.imwrite(f"result/{imgName}_conf_{conf}.jpg", img, [cv2.IMWRITE_JPEG_QUALITY, 50])
 # show the output image
-s = 0.2
+s = 0.15
 rimage = cv2.resize(img, (int(s*img.shape[1]), int(s*img.shape[0])), cv2.INTER_LINEAR)
 cv2.imshow("Face detection with deep learning", rimage)
 cv2.waitKey(0)
