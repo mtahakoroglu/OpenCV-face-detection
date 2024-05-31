@@ -1,5 +1,15 @@
 <h1>OpenCV'de Yüz Tespiti (Face Detection in OpenCV)</h1>
-<p align="justify">Burada bahsedeceğimiz iki metottan Haar Cascade (HC) ismiyle anılan makine öğrenmesi metodu aynı zamanda Viola - Jones metodu olarak da biliniyor [1,2]. Bu metot Haar-like özniteliklerini (features) kullanarak oldukça başarılı bir biçimde nesne tespiti (object detection) yapabiliyor. Burada bu tekniği yüz tespitinde kullanacak olsak da HC başka işlerde de başarıyla kullanılabiliyor (eğer OpenCV'yi Windows bilgisayarınıza Anaconda platformu kullanarak <b>opencv-env</b> isminde bir sanal ortama yüklediyseniz C:\Users\XYZ\anaconda3\envs\opencv-env\Lib\site-packages\cv2\data dizininde (kullanıcı isminiz XYZ) çeşitli HC nesne tespit etme dosyalarını e.g., göz tespiti (eye detection), gülümseme tespiti (smile detection), plaka tespiti (license plate detection) görebilirsiniz). Bu metodun en çok tercih edilme nedeni modern metotlara göre daha basit olması ve işlemcilerde hızlı bir biçimde koşabilmesi. Bu da sınırlı işlemci gücüne sahip donanımlarda bu metodu ilgili problemlerde ilk tercih haline getiriyor.</p>
+<p align="justify">Burada bahsedeceğimiz iki metottan Haar Cascade (HC) ismiyle anılan makine öğrenmesi metodu aynı zamanda Viola - Jones metodu olarak da biliniyor [1,2]. Bu metot Haar-like özniteliklerini (features) kullanarak oldukça başarılı bir biçimde nesne tespiti (object detection) yapabiliyor. Burada bu tekniği yüz tespitinde kullanacak olsak da HC başka işlerde de başarıyla kullanılabiliyor (eğer OpenCV'yi Windows bilgisayarınıza Anaconda platformu kullanarak <b>opencv-env</b> isminde bir sanal ortama <a href="https://youtu.be/OgSuLn3rZzI">yüklerseniz</a> <b>C:\Users\XYZ\anaconda3\envs\opencv-env\Lib\site-packages\cv2\data</b> dizininde (kullanıcı isminiz XYZ) çeşitli HC nesne tespit etme dosyalarını e.g., göz tespiti (eye detection), gülümseme tespiti (smile detection), plaka tespiti (license plate detection) görebilirsiniz). Bu metodun en çok tercih edilme nedeni modern metotlara göre daha basit olması ve işlemcilerde hızlı bir biçimde koşabilmesi. Bu da sınırlı işlemci gücüne sahip donanımlarda bu metodu ilgili problemlerde ilk tercih haline getiriyor.</p>
+
+<h2>Anaconda'da opencv-env isimli sanal ortamı ayarlama komutları</h2>
+<p align="justify">İlk önce <b>opencv-env</b> isimli sanal ortamı (virtual environment - venv) oluşturalım. Sonra ortamı aktif hâle getirelim. Ardından ilk adım olarak Python install package denilen <b>pip</b> paketini yükleyip, son olarak da <b>pip</b> ile OpenCV'yi sanal ortama yükleyelim. Bu komutları internete bağlı olarak koşturduğumuzda artık PowerShell ile işimiz bitiyor. Bundan sonra OpenCV kodlarını VS Code gibi bir IDE üzerinde koşturacağız.</p>
+
+<ul>
+	<li>conda create --name opencv-env</li>
+	<li>conda activate opencv-env</li>
+	<li>conda install pip</li>
+	<li>pip install opencv-contrib-python</li>
+</ul>
 
 <h2>Haar Cascade ile Yüz Tespiti (Face Detection with Haar Cascade)</h2>
 
