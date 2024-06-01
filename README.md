@@ -11,6 +11,8 @@
 	<li>pip install opencv-contrib-python</li>
 </ul>
 
+<p align="justify">Bu kod deposundaki yüz tespiti örneklerini OpenCV'de koşturmayı sayfayı inceleyerek başaramazsanız, <a href="https://youtu.be/yf0bBCx3KGU">videoyu izleyebilirsiniz</a>.</p>
+
 <h2>Haar Cascade ile Yüz Tespiti (Face Detection with Haar Cascade)</h2>
 
 <p align="justify">Aşağıdaki Haar Cascade ile yüz tespiti kodunda iki adet ayarlanabilir parametre var. Bunların isimleri <b>scaleFactor</b> ve <b>minNeighbors</b>. Bunları değiştirerek elde edilecek yüz tespiti sonuçlarını değiştirebilirsiniz.</p>
