@@ -1,7 +1,7 @@
 import cv2
 print("[BİLGİ] Haar Cascade yüz tespit edici'yi yüklüyor...")
 detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-imgName = "IMG_6707.jpg"
+imgName = "IR_00135_RGB.png"
 imgName, imgExtension = imgName.split('.')
 img = cv2.imread(f"image/{imgName}.{imgExtension}")
 # Haar Cascade gri tonlu resimler üzerinde çalıştığından renk uzayı dönüşümü yapalım

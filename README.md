@@ -213,7 +213,7 @@ cv2.destroyAllWindows()
 
 <img src="result/deep_learning_face_detection_frame_2860.jpg" alt="Derin Öğrenme ile web cam üzerinde yüz tespiti" width="400" height=auto>
 
-<h2>Resimleri OpenCV'de numpy ile Birleştirma</h2>
+<h2>Resimleri OpenCV'de numpy ile Birleştirme</h2>
 <p>Bu kod deposunda yer alan <b>result</b> klasörü içerisinde iki tane örnek Python kodu var. O kodlara birleştirmek istediğiniz resim isimlerini girerek aşağıdaki gibi resimleri yan yana veya alt alta getirebilirsiniz.</p>
 
 <b>result/merge_image_1_by_2.py</b>

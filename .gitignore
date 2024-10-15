@@ -1,3 +1,5 @@
 paper
 doc/*docx
 .gitignore
+face_detection_HC_image_yemir_class.py
+image/*jpg
