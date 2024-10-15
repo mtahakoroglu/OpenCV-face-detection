@@ -3,3 +3,4 @@ doc/*docx
 .gitignore
 face_detection_HC_image_yemir_class.py
 image/*jpg
+result/yemir-class-doguhan-birthday_scaleFactor_1.05_minNeighbors_25.jpg
